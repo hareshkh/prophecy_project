@@ -7,3 +7,7 @@ First release
 *** Release notes for version: 1.0.0 ***
 
 Release one
+
+*** Release notes for version: 1.0.0 ***
+
+Release one
