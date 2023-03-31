@@ -1,17 +1,22 @@
+---
 version: 2
 sources:
-  - name: "psrc"
-    database: "database"
-    schema: "schema"
-    tables:
-      - name: "ptab"
-        identifier: "table"
-        columns:
-          - name: "cents"
-            type: "INT64"
-          - name: "id"
-            type: "STRING"
-          - name: "first_name"
-            type: "STRING"
-          - name: "last_name"
-            type: "STRING"
+- name: "psrc"
+  database: "database"
+  schema: "schema"
+  tables:
+  - name: "ptab"
+    identifier: "table"
+    columns:
+    - name: "cents"
+      dataType:
+        type: "Integer"
+    - name: "id"
+      dataType:
+        type: "String"
+    - name: "first_name"
+      dataType:
+        type: "String"
+    - name: "last_name"
+      dataType:
+        type: "String"
