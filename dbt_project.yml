@@ -1,22 +1,31 @@
-name: 'prophecy_dependency'
-
+# ==================
+# Project Details
+# ==================
+name: "prophecy_dependency"
 config-version: 2
-version: '0.1'
+require-dbt-version:
+- ">=1.0.0"
+- "<2.0.0"
+version: "0.1"
+profile: "prophecy-bigquery"
 
-profile: 'prophecy-bigquery'
-
-model-paths: ["models"]
-seed-paths: ["seeds"]
-test-paths: ["tests"]
-analysis-paths: ["analysis"]
-macro-paths: ["macros"]
-
-target-path: "target"
+# ==================
+# File Path Configs
+# ==================
+test-paths:
+- "tests"
 clean-targets:
-    - "target"
-    - "dbt_modules"
-    - "dbt_packages"
-    - "logs"
-
-require-dbt-version: [">=1.0.0", "<2.0.0"]
-
+- "target"
+- "dbt_modules"
+- "dbt_packages"
+- "logs"
+seed-paths:
+- "seeds"
+model-paths:
+- "models"
+- "prophecy-sources"
+analysis-paths:
+- "analysis"
+macro-paths:
+- "macros"
+target-path: "target"
